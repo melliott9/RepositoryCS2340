@@ -31,7 +31,12 @@ public class Person1 {
 	 */
 	private String calc(String input) {
 	  //Person 1 put your implementation here
-	  return null;
+		int len = input.length();
+		String add1 = input.substring(len - 1);
+		String add2 = input.substring(len - 2);
+		input = input.substring(0, len - 3);
+		input = add1 + add2 + input;
+	  return input;
 	}
 	
 	/**
@@ -44,6 +49,12 @@ public class Person1 {
 	 */
 	public String toString(String input) {
 	  return name + calc(input);
+	}
+
+	
+	public static void main(String[] args) {
+		Person1 bill = new Person1("Bill");
+		System.out.println(bill.calc("OMGYEAH"));
 	}
 
 }
