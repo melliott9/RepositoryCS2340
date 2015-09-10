@@ -34,7 +34,7 @@ public class Person2 {
 	  String[] newInput = input.split(",");
 	  Random randomGenerator = new Random();
 	  String newString = "";
-	  for (int i = 0; i < newInput.length; i++){
+	  for (int i = 0; i < newInput.length - 1; i++){
 	      int randInt = randomGenerator.nextInt(input.length());
 	      newString = newString + newInput[randInt];
 	  }
